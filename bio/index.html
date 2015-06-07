@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+
+ __                                          ____                           ___                         
+/\ \                                        /\  _`\                   __  /'___\                        
+\ \ \         __     _ __   _ __   __  __   \ \ \L\ \    ___     ___ /\_\/\ \__/   __      ___     __   
+ \ \ \  __  /'__`\  /\`'__\/\`'__\/\ \/\ \   \ \  _ <'  / __`\ /' _ `\/\ \ \ ,__\/'__`\   /'___\ /'__`\ 
+  \ \ \L\ \/\ \L\.\_\ \ \/ \ \ \/ \ \ \_\ \   \ \ \L\ \/\ \L\ \/\ \/\ \ \ \ \ \_/\ \L\.\_/\ \__//\  __/ 
+   \ \____/\ \__/.\_\\ \_\  \ \_\  \/`____ \   \ \____/\ \____/\ \_\ \_\ \_\ \_\\ \__/.\_\ \____\ \____\
+    \/___/  \/__/\/_/ \/_/   \/_/   `/___/> \   \/___/  \/___/  \/_/\/_/\/_/\/_/ \/__/\/_/\/____/\/____/
+                                       /\___/                                                           
+                                       \/__/                                                            
+-->
+<html ng-app='persBio'>
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>Larry Boniface</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller='mainCtrl'>
+
+<!-- NAVIGATION START -->
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <button class="navbar-toggle" ng-class="!navbarCollapsed" ng-click="naviCollapse()">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- BRAND HEADER -->
+      <a ui-sref='/' class="pull-left"><img class="nav-pic" src="/img/fbpic.jpg"></a>
+      <a ui-sref='/' class="navbar-brand">larry.boniface</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" ng-class="navbarCollapsed && 'in'" ng-click="naviCollapse()">
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="about">about</a></li>
+        <li><a ui-sref="projects">projects</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li><a href="http://linkd.in/1eUt9IK" target="_blank" class="fa fa-linkedin-square fa-lg"></a></li>
+        <li><a href="http://bit.ly/1RS3MFG" target="_blank" class="fa fa-github-alt fa-lg"></a></li>
+        <li><a href="http://bitly.com/1BTXdwo" target="_blank" class="fa fa-twitter-square fa-lg"></a></li>
+        <li><a href="http://t.co/GctMi5Q6o9" target="_blank" class="fa fa-instagram fa-lg"></a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+<section>
+    <!-- INJECT CONTENT -->
+    <div ui-view></div>
+</section>
+
+<!--SCRIPTS 'N SUCH -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+<script src="/js/scripts/ui-bootstrap-tpls-0.13.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/controller/mainCtrl.js"></script>
+
+</body>
+</html>

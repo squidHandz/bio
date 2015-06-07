@@ -1,0 +1,43 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	background: #F8F8F8;
+	font-family: Sans-serif;
+}
+.navbar-brand{
+	font-family: Tahoma, Sans-serif;
+	font-size: 1em; 
+	padding-left: 1.5em;	
+}
+
+.nav {
+	font-family: Tahoma, Sans-serif;
+	font-size: 1em; 
+}
+.nav-pic {
+	max-height: 4em;
+	border-radius: 25%;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.about-wrapper a img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    max-height: 100%;
+    min-height: 20%;
+    max-width: 100%;
+    min-width: 20%;
+}
+
